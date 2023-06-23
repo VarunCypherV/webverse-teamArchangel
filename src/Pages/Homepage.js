@@ -4,15 +4,22 @@ import { useNavigate } from "react-router-dom";  //router navigation
 function Homepage() {
   const navigate = useNavigate();  //router initializaiion
   return (
-    <div>
-    
-      <h1>Hello, World!</h1>
-      <p>This is a simple React app.</p>
-      <button
+    <Container>
+        <h1>Hello, World!</h1>
+        <p>This is a simple React app.</p>
+        <button
           onClick={() => navigate("/enterpath")} //router navigation implementation
         />
-    </div>
+    </Container>
+
   );
 }
 
 export default Homepage;
+
+const Container = styled.div`
+  display: grid;
+  place-items: center;
+  height: 300vh;
+  background-color: whitesmoke;
+`;
